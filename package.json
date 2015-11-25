@@ -1,0 +1,28 @@
+{
+  "name": "nested_components",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "cplescan",
+  "contributors": [],
+  "dependencies": {
+    "angular2": "2.0.0-alpha.46",
+    "systemjs": "0.19.6"
+  },
+  "main": "main.js",
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  },
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src"
+  },
+  "license": "ISC",
+  "description": ""
+}

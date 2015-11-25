@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Angular 2 - Nested Components</title>
+        
+        <base href="/src/"/>
+        
+        <script src="../node_modules/systemjs/dist/system.src.js"></script>
+        <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+        
+        <script>
+            System.config({
+                packages: {
+                    app: {
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+        </script>
+    </head>
+    
+    <body>
+        <app>loading...</app>
+        
+        <script>
+            System.import( 'app/app' );
+        </script>        
+    </body>
+    
+</html>
