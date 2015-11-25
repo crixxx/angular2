@@ -11,9 +11,16 @@ import { ComponentB } from './compB';
 })
 class AppComponent
 {
+    counter: number = 0;
     constructor()
     {
         console.log( 'application' );
+    }
+
+    incrementCounter()
+    {
+        console.log( 'increment' );
+        this.counter++;
     }
 }
 

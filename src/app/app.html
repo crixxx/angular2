@@ -1,5 +1,10 @@
 <div>
     application
+    <div *ng-if="counter">counter: {{counter}}</div>
 </div>
-<comp-a></comp-a>
+
+<comp-a (btn-pressed)="incrementCounter()"></comp-a>
+
 <comp-b></comp-b>
+
+<comp-a></comp-a>
