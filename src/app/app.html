@@ -1,9 +1,14 @@
 <div>
-    application
+    --application--
+    <p><input type='checkbox' [checked]="checked" (change)="checked=!checked" /></p>
     <div *ng-if="counter">counter: {{counter}}</div>
 </div>
 
-<comp-a (btn-pressed)="incrementCounter()"></comp-a>
+<comp-a 
+    (btn-pressed)="incrementCounter()" 
+    [checked]="getCheckedStatus()"
+    [test-property]="'abcd'">
+</comp-a>
 
 <comp-b></comp-b>
 

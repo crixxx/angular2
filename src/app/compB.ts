@@ -4,8 +4,8 @@ import { Component } from 'angular2/angular2';
     selector: 'comp-b',
     templateUrl: 'app/compB.html',
     styles: [
-        `* {
-            background-color: blue;
+        `.root {
+            border: 1px solid blue;
         }`
     ],
 })

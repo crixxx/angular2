@@ -12,6 +12,8 @@ import { ComponentB } from './compB';
 class AppComponent
 {
     counter: number = 0;
+    checked: boolean = false;
+    
     constructor()
     {
         console.log( 'application' );
@@ -22,6 +24,12 @@ class AppComponent
         console.log( 'increment' );
         this.counter++;
     }
+
+    getCheckedStatus(): boolean
+    {
+        return this.checked;
+    }
+
 }
 
 
