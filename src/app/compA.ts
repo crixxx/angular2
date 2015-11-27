@@ -1,4 +1,4 @@
-import { Component, Output, Input, EventEmitter, OnChanges } from 'angular2/angular2';
+import { Component, Output, Input, EventEmitter, OnChanges, HostBinding } from 'angular2/angular2';
 
 @Component({
     selector: 'comp-a',
@@ -17,6 +17,10 @@ export class ComponentA
 
     @Input() checked: boolean;
     @Input() testProperty: string = 'input property';
+
+    @Input() inputValue: string;
+    
+    @HostBinding( 'class' ) hbprop = 'abbb';
 
     private checkedText: string;
 

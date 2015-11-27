@@ -7,7 +7,7 @@
         <input id="i1" 
                #input1element
                [attr.value_attr]="value1" 
-               [value]="value1" 
+               [(ng-model)]="value1" 
                [class.optional-border]="checked" 
                [style.width.px]="inputWidth"/>
         <button (click)="value1='new value'">change value</button>
@@ -18,7 +18,8 @@
 <comp-a 
     (btn-pressed)="incrementCounter()" 
     [checked]="getCheckedStatus()"
-    [test-property]="'abcd'">
+    [test-property]="'abcd'"
+    [input-value]="value1">
 </comp-a>
 
 <comp-b></comp-b>
