@@ -7,12 +7,15 @@ import { ComponentB } from './compB';
 @Component({
       selector: 'app',
       templateUrl: 'app/app.html',
+      styleUrls: [ 'app/app.css' ],
       directives: [ ComponentA, ComponentB ], // this is where the child components get instantiated
 })
 class AppComponent
 {
     counter: number = 0;
     checked: boolean = false;
+    
+    value1: string = 'value 111';
     
     constructor()
     {

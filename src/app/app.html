@@ -2,6 +2,14 @@
     --application--
     <p><input type='checkbox' [checked]="checked" (change)="checked=!checked" /></p>
     <div *ng-if="counter">counter: {{counter}}</div>
+    
+    <div>
+        <input id="i1" 
+               [attr.value_attr]="value1" 
+               [value]="value1" 
+               [class.optional-border]="checked" />
+        <button (click)="value1='new value'">change value</button>
+    </div>
 </div>
 
 <comp-a 
@@ -13,3 +21,5 @@
 <comp-b></comp-b>
 
 <comp-a></comp-a>
+
+<checkbox-tree></checkbox-tree>

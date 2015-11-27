@@ -1,4 +1,4 @@
-import { Component, Output, Input, EventEmitter } from 'angular2/angular2';
+import { Component, Output, Input, EventEmitter, OnChanges } from 'angular2/angular2';
 
 @Component({
     selector: 'comp-a',
@@ -40,4 +40,5 @@ export class ComponentA
             this.checkedText = changes.checked.currentValue ? 'checked' : 'not checked';
         }
     }
+    
 }
