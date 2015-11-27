@@ -5,10 +5,13 @@
     
     <div>
         <input id="i1" 
+               #input1element
                [attr.value_attr]="value1" 
                [value]="value1" 
-               [class.optional-border]="checked" />
+               [class.optional-border]="checked" 
+               [style.width.px]="inputWidth"/>
         <button (click)="value1='new value'">change value</button>
+        width <button (click)="decreaseWidth()">-</button><button (click)="increaseWidth()">+</button>
     </div>
 </div>
 

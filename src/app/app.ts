@@ -14,6 +14,7 @@ class AppComponent
 {
     counter: number = 0;
     checked: boolean = false;
+    inputWidth: number = 80;
     
     value1: string = 'value 111';
     
@@ -31,6 +32,16 @@ class AppComponent
     getCheckedStatus(): boolean
     {
         return this.checked;
+    }
+    
+    increaseWidth()
+    {
+        this.inputWidth++;
+    }
+    
+    decreaseWidth()
+    {
+        this.inputWidth--;
     }
 
 }
