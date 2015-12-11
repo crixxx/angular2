@@ -1,6 +1,7 @@
-import { Component, bootstrap } from 'angular2/angular2';
+import { Component, bootstrap, ElementRef, ViewRef } from 'angular2/angular2';
 import { ComponentA } from './compA';
 import { ComponentB } from './compB';
+import { NgShow } from 'ng/ng-show';
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -8,7 +9,7 @@ import { ComponentB } from './compB';
       selector: 'app',
       templateUrl: 'app/app.html',
       styleUrls: [ 'app/app.css' ],
-      directives: [ ComponentA, ComponentB ], // this is where the child components get instantiated
+      directives: [ ComponentA, ComponentB, NgShow ], // this is where the child components get instantiated
 })
 class AppComponent
 {
@@ -18,7 +19,7 @@ class AppComponent
     
     value1: string = 'value 111';
     
-    constructor()
+    constructor( private _element: ElementRef )
     {
         console.log( 'application' );
     }
@@ -27,6 +28,7 @@ class AppComponent
     {
         console.log( 'increment' );
         this.counter++;
+        console.log( this._element );
     }
 
     getCheckedStatus(): boolean

@@ -1,7 +1,7 @@
 <div>
     --application--
     <p><input type='checkbox' [checked]="checked" (change)="checked=!checked" /></p>
-    <div *ng-if="counter">counter: {{counter}}</div>
+    <div *ng-show="counter">counter (hide): {{counter}}</div>
     
     <div>
         <input id="i1" 
@@ -16,7 +16,7 @@
 </div>
 
 <comp-a 
-    (btn-pressed)="incrementCounter()" 
+    (button-pressed)="incrementCounter()" 
     [checked]="getCheckedStatus()"
     [test-property]="'abcd'"
     [input-value]="value1">
@@ -27,3 +27,12 @@
 <comp-a></comp-a>
 
 <checkbox-tree></checkbox-tree>
+
+<div>
+    <span [ng-switch]="1">
+        <p *ng-switch-when="1" attr1><a>1111</a></p>
+        <b *ng-switch-when="1" attr2>2222</b>
+        <a *ng-switch-when="3" attr3>3333</a>
+        <span *ng-switch-default attrd>0000</span>
+    </span>
+</div>

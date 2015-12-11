@@ -8,15 +8,17 @@ import { Component, Output, Input, EventEmitter, OnChanges, HostBinding } from '
             border: 1px solid red;
         }`
     ],
-    inputs: [ 'testproperty' ],
+    inputs: [ 'testProperty' ],
+    //outputs: [ 'btnp:buttonPressed' ],
 })
 export class ComponentA
 {
     // important: the event name in HTML is 'btn-pressed'
-    @Output() btnPressed = new EventEmitter();
+    @Output( 'buttonPressed' ) btnp = new EventEmitter();
+    //btnp = new EventEmitter();
 
     @Input() checked: boolean;
-    @Input() testProperty: string = 'input property';
+    private testProperty: string = 'input property';
 
     @Input() inputValue: string;
     
@@ -32,7 +34,7 @@ export class ComponentA
     buttonPressed()
     {
         console.log( 'button component A' );
-        this.btnPressed.next({}); // fire the event
+        this.btnp.next({}); // fire the event
     }
 
     onChanges( changes )
