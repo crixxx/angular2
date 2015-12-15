@@ -9,7 +9,9 @@
                [attr.value_attr]="value1" 
                [(ng-model)]="value1" 
                [class.optional-border]="checked" 
-               [style.width.px]="inputWidth"/>
+               [style.width.px]="inputWidth"
+               (blur)="input1element.style.backgroundColor='green'"
+               (focus)="input1element.style.backgroundColor=null" />
         <button (click)="value1='new value'">change value</button>
         width <button (click)="decreaseWidth()">-</button><button (click)="increaseWidth()">+</button>
     </div>

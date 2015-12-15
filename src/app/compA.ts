@@ -17,7 +17,7 @@ export class ComponentA
     @Output( 'buttonPressed' ) btnp = new EventEmitter();
     //btnp = new EventEmitter();
 
-    @Input() checked: boolean;
+//    @Input() checked: boolean;
     private testProperty: string = 'input property';
 
     @Input() inputValue: string;
@@ -37,14 +37,20 @@ export class ComponentA
         this.btnp.next({}); // fire the event
     }
 
-    onChanges( changes )
+//    onChanges( changes )
+//    {
+//        // watch for changes of 'checked' property
+//        if( changes.checked )
+//        {
+//            console.log( `ComponentA, checked property - value changed: ${changes.checked.currentValue ? 'true' : 'false'}` );
+//            this.checkedText = changes.checked.currentValue ? 'checked' : 'not checked';
+//        }
+//    }
+    
+    @Input() set checked( value: boolean )
     {
-        // watch for changes of 'checked' property
-        if( changes.checked )
-        {
-            console.log( `ComponentA, checked property - value changed: ${changes.checked.currentValue ? 'true' : 'false'}` );
-            this.checkedText = changes.checked.currentValue ? 'checked' : 'not checked';
-        }
+        this.checkedText = value ? 'checked' : 'not checked';
     }
+
     
 }

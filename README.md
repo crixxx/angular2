@@ -11,3 +11,20 @@ Run the typescript compiler and the http server:
 
 * $ npm run tsc
 * $ npm run live-server
+
+# covered features
+
+* importing JS files using System.js
+* property binding
+* event binding
+* interpolation
+* local variables
+* two-way binding
+* custom template directive
+* dependency injection
+* directives used as child-components
+* input properties
+* output properties
+* property setter
+* host binding
+* ngSwitch core directive
